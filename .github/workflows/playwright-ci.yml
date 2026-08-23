@@ -57,4 +57,4 @@ jobs:
         with:
           name: Playwright Tests
           path: employee_automation/test-results/*.xml
-          reporter: junit
+          format: junit
