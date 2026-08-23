@@ -37,20 +37,6 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test --reporter=dot --reporter=html
 
-      - name: Show test-results contents (diagnostic)
-        if: always()
-        run: |
-          echo "PWD: $(pwd)"
-          echo "Listing test-results:" 
-          ls -la test-results || true
-
-      - name: Generate Actions summary from JUnit (alternate)
-        if: always()
-        run: node .github/scripts/generate-summary.js
-        working-directory: employee_automation
-        env:
-          SUMMARY_PATH: ${{ github.step_summary }}
-          WORKDIR: ${{ github.workspace }}/employee_automation
 
       - name: Upload Playwright HTML report
         if: always()
@@ -59,12 +45,6 @@ jobs:
           name: playwright-report
           path: employee_automation/playwright-report
 
-      - name: Upload JUnit results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: junit-results
-          path: employee_automation/test-results/*.xml
 
       # Test summary is published by the separate `playwright-report` workflow
       # which runs after CI and processes the uploaded `junit-results` artifact.
