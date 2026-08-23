@@ -16,5 +16,5 @@ module.exports = defineConfig({
     video: 'retain-on-failure',
     trace: 'retain-on-failure',
   },
-  reporter: [ ['list'], ['html', { open: 'never' }] ],
+  reporter: [ ['list'], ['html', { open: 'never' }], ['junit', { outputFile: 'test-results/results.xml' }] ],
 });

@@ -35,7 +35,14 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test --reporter=dot --reporter=junit --reporter=html
+        run: npx playwright test --reporter=dot --reporter=html
+
+      - name: Show test-results contents (diagnostic)
+        if: always()
+        run: |
+          echo "PWD: $(pwd)"
+          echo "Listing test-results:" 
+          ls -la test-results || true
 
       - name: Upload Playwright HTML report
         if: always()
