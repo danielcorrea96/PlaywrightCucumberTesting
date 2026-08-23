@@ -1,0 +1,60 @@
+<testsuites id="" name="" tests="18" failures="0" skipped="1" errors="0" time="60.613724999999995">
+<testsuite name="auth/login.spec.ts" timestamp="2026-08-23T18:08:46.503Z" hostname="" tests="2" failures="0" skipped="0" time="10.408" errors="0">
+<testcase name="Authentication - Login › successful login with valid admin credentials" classname="auth/login.spec.ts" time="7.759">
+</testcase>
+<testcase name="Authentication - Login › failed login with incorrect password" classname="auth/login.spec.ts" time="2.649">
+</testcase>
+</testsuite>
+<testsuite name="dashboard/dashboard.spec.ts" timestamp="2026-08-23T18:08:46.503Z" hostname="" tests="2" failures="0" skipped="0" time="17.985" errors="0">
+<testcase name="Dashboard Analytics › dashboard metrics load correctly" classname="dashboard/dashboard.spec.ts" time="4.078">
+</testcase>
+<testcase name="Dashboard Analytics › dashboard refresh navigation" classname="dashboard/dashboard.spec.ts" time="13.907">
+</testcase>
+</testsuite>
+<testsuite name="employee/create.spec.ts" timestamp="2026-08-23T18:08:46.503Z" hostname="" tests="1" failures="0" skipped="0" time="11.836" errors="0">
+<testcase name="Employee - Create › create a new employee successfully" classname="employee/create.spec.ts" time="11.836">
+</testcase>
+</testsuite>
+<testsuite name="employee/edit_delete.spec.ts" timestamp="2026-08-23T18:08:46.503Z" hostname="" tests="2" failures="0" skipped="0" time="15.851" errors="0">
+<testcase name="Employee - Edit and Delete › edit an existing employee" classname="employee/edit_delete.spec.ts" time="8.534">
+</testcase>
+<testcase name="Employee - Edit and Delete › delete an employee" classname="employee/edit_delete.spec.ts" time="7.317">
+</testcase>
+</testsuite>
+<testsuite name="forgot_password/forgot_password.spec.ts" timestamp="2026-08-23T18:08:46.503Z" hostname="" tests="2" failures="0" skipped="0" time="12.452" errors="0">
+<testcase name="Forgot Password › forgot password with valid email" classname="forgot_password/forgot_password.spec.ts" time="9.944">
+</testcase>
+<testcase name="Forgot Password › forgot password with invalid email" classname="forgot_password/forgot_password.spec.ts" time="2.508">
+</testcase>
+</testsuite>
+<testsuite name="pagination/pagination.spec.ts" timestamp="2026-08-23T18:08:46.503Z" hostname="" tests="2" failures="0" skipped="0" time="10.285" errors="0">
+<testcase name="Pagination › navigate employee list pages" classname="pagination/pagination.spec.ts" time="4.791">
+</testcase>
+<testcase name="Pagination › pagination boundary behavior - last page" classname="pagination/pagination.spec.ts" time="5.494">
+</testcase>
+</testsuite>
+<testsuite name="registration/registration.spec.ts" timestamp="2026-08-23T18:08:46.503Z" hostname="" tests="3" failures="0" skipped="0" time="7.956" errors="0">
+<testcase name="User Registration › successful registration with valid data" classname="registration/registration.spec.ts" time="3.066">
+</testcase>
+<testcase name="User Registration › registration with mismatched passwords" classname="registration/registration.spec.ts" time="2.478">
+</testcase>
+<testcase name="User Registration › registration with weak password" classname="registration/registration.spec.ts" time="2.412">
+</testcase>
+</testsuite>
+<testsuite name="search/search.spec.ts" timestamp="2026-08-23T18:08:46.503Z" hostname="" tests="4" failures="0" skipped="1" time="47.532" errors="0">
+<testcase name="Search and Filter › search employees by name" classname="search/search.spec.ts">
+<properties>
+<property name="skip" value="No rows available to derive a name">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Search and Filter › search employees by email" classname="search/search.spec.ts" time="25.46">
+</testcase>
+<testcase name="Search and Filter › filter employees by grade" classname="search/search.spec.ts" time="4.433">
+</testcase>
+<testcase name="Search and Filter › search returns no results" classname="search/search.spec.ts" time="4.186">
+</testcase>
+</testsuite>
+</testsuites>
