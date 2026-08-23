@@ -44,6 +44,14 @@ jobs:
           echo "Listing test-results:" 
           ls -la test-results || true
 
+      - name: Generate Actions summary from JUnit (alternate)
+        if: always()
+        run: node .github/scripts/generate-summary.js
+        working-directory: employee_automation
+        env:
+          SUMMARY_PATH: ${{ github.step_summary }}
+          WORKDIR: ${{ github.workspace }}/employee_automation
+
       - name: Upload Playwright HTML report
         if: always()
         uses: actions/upload-artifact@v4
