@@ -35,6 +35,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
+        id: run_tests
         run: npx playwright test --reporter=dot --reporter=html
 
 
@@ -44,6 +45,15 @@ jobs:
         with:
           name: playwright-report
           path: employee_automation/playwright-report
+
+      - name: Write Actions summary
+        if: always()
+        run: |
+          echo "## Playwright Test Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Status: ${{ steps.run_tests.outcome }}" >> $GITHUB_STEP_SUMMARY
+          echo "- HTML report artifact: playwright-report (download from Artifacts)" >> $GITHUB_STEP_SUMMARY
+          echo "- Logs: see the 'Run Playwright tests' step for details." >> $GITHUB_STEP_SUMMARY
 
 
       # Test summary is published by the separate `playwright-report` workflow
