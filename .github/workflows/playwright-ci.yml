@@ -56,6 +56,7 @@ jobs:
         uses: dorny/test-reporter@v1
         with:
           name: Playwright Tests
-          path: employee_automation/test-results/*.xml
+          path: test-results/*.xml
           reporter: java-junit
           use-actions-summary: true
+          working-directory: employee_automation
