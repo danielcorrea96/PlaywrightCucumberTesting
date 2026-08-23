@@ -58,12 +58,5 @@ jobs:
           name: junit-results
           path: employee_automation/test-results/*.xml
 
-      - name: Publish test summary (JUnit)
-        if: always()
-        uses: dorny/test-reporter@v1
-        with:
-          name: Playwright Tests
-          path: test-results/*.xml
-          reporter: java-junit
-          use-actions-summary: true
-          working-directory: employee_automation
+      # Test summary is published by the separate `playwright-report` workflow
+      # which runs after CI and processes the uploaded `junit-results` artifact.
